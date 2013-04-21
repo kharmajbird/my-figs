@@ -1,2 +1,3 @@
-U2FsdGVkX1/+J2yybI0msOjMaM0yobu96LwIcuUgF0ZWhzwEFyo9TFy8mjJPh+5D
-wDWYOHt8fHdY8k0wN4+gJ3xOaCMJNl6kXFXz0q6X8eU=
+node 'bootsy.jaynet.org' {
+    class { 'jl_workstation': }
+}
