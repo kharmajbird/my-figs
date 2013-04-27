@@ -1,106 +1,65 @@
-class jl_workstation {
-
-    file { '/home/modernpharoah/.bashrc':
-        ensure => 'file',
-        mode => '0644',
-        owner => 'root',
-        group => 'root',
-        source => 'puppet:///jl_workstation/dot.bashrc',
-        require => [
-            User['modernpharoah'],
-        ],
-    }
-    file { '/home/modernpharoah/.gitconfig':
-        ensure => 'file',
-        mode => '0644',
-        owner => 'root',
-        group => 'root',
-        source => 'puppet:///jl_workstation/dot.gitconfig',
-        require => [
-            User['modernpharoah'],
-        ],
-    }
-    file { '/etc/vpnc/pavlov.conf':
-        ensure => 'file',
-        mode => '0400',
-        owner => 'root',
-        group => 'root',
-        source => 'puppet:///jl_workstation/pavlov.conf',
-        require => [
-            Package['vpnc'],
-        ],
-    }
-    file { '/etc/default/grub':
-        ensure => 'file',
-        mode => '0644',
-        owner => 'root',
-        group => 'root',
-        source => 'puppet:///jl_workstation/grub.default',
-    }
-    file { '/boot/grub/custom.cfg':
-        ensure => 'file',
-        mode => '0644',
-        owner => 'root',
-        group => 'root',
-        source => 'puppet:///jl_workstation/custom.cfg',
-    }
-    file { '/boot/JayOS-Laptop-14.png':
-        ensure => 'file',
-        mode => '0644',
-        owner => 'root',
-        group => 'root',
-        source => 'puppet:///jl_workstation/JayOS-Laptop-14.png',
-    }
-
-
-    package { 'firmware-linux-free': ensure => 'installed', }
-    package { 'vpnc': ensure => 'installed', }
-    package { 'puppet': ensure => 'installed', }
-    package { 'puppetmaster': ensure => 'installed', }
-    package { 'virtualbox': ensure => 'installed', }
-    package { 'xtightvncviewer': ensure => 'installed', }
-    package { 'git': ensure => 'installed', }
-    package { 'gparted': ensure => 'installed', }
-    package { 'aespipe': ensure => 'installed', }
-    package { 'vim-tiny': ensure => 'purged', }
-    package { 'vim': ensure => 'installed', }
-    package { 'transmission': ensure => 'installed', }
-    package { 'pidgin': ensure => 'installed', }
-    package { 'wifi-radar': ensure => 'installed', }
-
-
-##    mount { '/home':
-##        device => '/dev/sda3',
-##        ensure => 'mounted',
-##        fstype => 'ext4',
-##    }
-##    mount { '/lfs':
-##        device => '/dev/sda2',
-##        ensure => 'mounted',
-##        fstype => 'ext3',
-##    }
-##    mount { '/scratch':
-##        device => '/dev/sda4',
-##        ensure => 'mounted',
-##        fstype => 'ext4',
-##    }
-    user { 'modernpharoah':
-        ensure => 'present',
-        comment => 'ModernPharoah',
-        uid => '1000',
-        gid => '1000',
-        groups => 'modernpharoah',
-        home => '/home/modernpharoah',
-        shell => '/bin/bash',
-    }
-
-
-##    exec { 'update-grub':
-##        command => 'update-grub',
-##        logoutput => 'true',
-##        require => [
-##            File['/etc/default/grub'],
-##            File['/boot/grub/custom.cfg'],
-##        ],
-##    }
-}
+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
+vC2C9wZUOEbvD8MkF3ncZw==
