@@ -1,4 +1,2 @@
-node default {
-}
-
-import "nodes.pp"
+U2FsdGVkX1/+J2yybI0msOPPieSsObyFiSksfjG9wU0xr144Rtr6uhEjiOLVZsd6
+KTzUGEjY7h6M49DFVrB8ag==
